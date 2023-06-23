@@ -1,0 +1,113 @@
+import java.util.Scanner;
+
+public class Testes {
+    // while
+
+    public static Scanner teclado = new Scanner(System.in);
+
+    public static void teste1(){
+        int i = 0 ;
+        while( i <= 10){ //true  ou false
+            System.out.println(i);
+
+            i++;
+        }
+    }
+    // 0 -10
+    public static void teste2(){
+        int i = 10;
+        while( i >= 0){ //true  ou false
+            System.out.println(i);
+
+            i--;
+        }        
+    }
+
+    public static void teste3(){
+        int n;
+
+        System.out.println("Diga a resposta pra vida o universo e tudo mais!");
+        n = teclado.nextInt();
+
+        while(n != 42){
+            System.out.println("Diga a resposta pra vida o universo e tudo mais!");
+            n = teclado.nextInt();
+        }
+            
+        System.out.println("Voce acertou");     
+    }
+
+
+    public static void teste4(){
+        int n;
+       
+        while(true){
+            System.out.println("Diga a resposta pra vida o universo e tudo mais!");
+            n = teclado.nextInt();
+            if (n == 42){
+                break;
+            }
+        }
+            
+        System.out.println("Voce acertou");     
+    }
+
+    public static void teste5(){
+        int n;
+
+        do{
+            System.out.println("Diga a resposta pra vida o universo e tudo mais!");
+            n = teclado.nextInt();
+
+        }while(n != 42);
+            
+        System.out.println("Voce acertou");     
+    }
+
+    // diga numero ateh q soma seja maior 30
+    public static void teste6(int valorMax){
+        int n;
+        int soma=0;
+        System.out.printf("Diga valores até chegar em %d \n", valorMax);
+
+        do{
+            System.out.println("Diga numero: ");
+            n = teclado.nextInt();
+            soma = soma + n;
+
+        }while(soma < valorMax);
+            
+        System.out.printf("O total é %d\n", soma);     
+    }
+
+
+
+    public static int lerInteiroNoIntervalo(int menor, int maior){
+        int a;
+        /*printf substitui os coringas, %d inteiro, %s Strig, %f float, passando os parametos separado por virgula
+         em seguida */
+        do {
+            System.out.printf("Diga um numero entre menor [ %d ,  %d ]:", menor, maior);
+            a = teclado.nextInt();
+
+        } while (a < menor || a > maior);
+        return a;
+
+    }
+
+
+
+    public static void main(String[] args) {        
+        /*
+        int numero;
+        int v1, v2;
+        v1 = teclado.nextInt();
+        v2 = teclado.nextInt();
+        numero = lerInteiroNoIntervalo(v1,v2);
+        */
+        int valor = teclado.nextInt();
+
+        teste6(valor);
+    }
+    
+}
