@@ -2,4 +2,4 @@
 ##### Estudante: Rani Vitoria Costa felicio
 ##### Professor: Thiago Ló.
 
-Listas de exercicios do beecrowd
+###### Listas de exercicios do beecrowd e exemplos feito em sala
