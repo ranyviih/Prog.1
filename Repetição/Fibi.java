@@ -8,8 +8,8 @@ public class Fibi {
 
         n = lerN(n);
 
-        int fib0 = 0;
-        int fib1 = 1;
+        final int fib0 = 0;
+        final int fib1 = 1;
         int prox = 0;
 
         verificandoSerieFib(n, fib0, fib1, prox);

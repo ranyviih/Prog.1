@@ -4,18 +4,17 @@ public class Pandorgas {
     final static Scanner teclado = new Scanner(System.in);
 
     public static void main(String[] args) {
-        int x = 0;
-        int y = 0;
-        int n = 0;
+        int tamBambu = 0;
+        int tamBambu2 = 0;
+        int quantPipas = 0;
         int resultado = 0;
 
-        n = lerN();
-        for (int i = 0; i < n; i++) {
-            x = lerX(x);
-            y = lerY(y);
-        }
+        quantPipas = lerQuantPipas(quantPipas);
 
-        resultado = calcularPandorgas(x, y, n, resultado);
+        tamBambu = lerTamBambu(tamBambu);
+        tamBambu2 = lerTamBambu2(tamBambu2);
+
+        calcularPandorgas(tamBambu, tamBambu2, quantPipas, resultado);
         imprimirResultado(resultado);
     }
 
@@ -23,29 +22,30 @@ public class Pandorgas {
         System.out.println(resultado + " cm2");
     }
 
-    public static int calcularPandorgas(int x, int y, int n, int resultado) {
-        for (int i = 0; i <= n; i++) {
-            resultado = (x * y) / 2;
+    public static int calcularPandorgas(int tamBambu, int tamBambu2, int quantPipas, int resultado) {
+        for (int i = 0; i < quantPipas; i++) {
+
+            resultado = ((tamBambu * tamBambu2) / 2);
         }
         return resultado;
     }
 
-    public static int lerX(int x) {
+    public static int lerTamBambu(int tamBambu) {
         do {
-            x = teclado.nextInt();
-        } while (x < 10 || x > 100);
-        return x;
+            tamBambu = teclado.nextInt();
+        } while (tamBambu < 10 || tamBambu > 100);
+        return tamBambu;
     }
 
-    public static int lerY(int y) {
+    public static int lerTamBambu2(int tamBambu2) {
         do {
-            y = teclado.nextInt();
-        } while (y < 10 || y > 100);
-        return y;
+            tamBambu2 = teclado.nextInt();
+        } while (tamBambu2 < 10 || tamBambu2 > 100);
+        return tamBambu2;
     }
 
-    public static int lerN() {
-        int n = teclado.nextInt();
-        return n;
+    public static int lerQuantPipas(int quantPipas) {
+        quantPipas = teclado.nextInt();
+        return quantPipas;
     }
 }
